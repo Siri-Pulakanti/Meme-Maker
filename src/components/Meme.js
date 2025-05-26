@@ -16,7 +16,7 @@ function Meme({ url }) {
       })
       .then((data) => setAllMemes(data.data.memes))
       .catch((error) => console.error(error));
-  }, []);
+  }, [url]);
   const getImage = () => {
     const image = allMemes[Math.floor(Math.random() * allMemes.length)];
     setMeme((prevMeme) => ({
